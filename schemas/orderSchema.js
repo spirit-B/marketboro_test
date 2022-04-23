@@ -1,12 +1,14 @@
 const mongoose = require("mongoose");
 const orderSchema = mongoose.Schema(
     {
-        productId: {
+        orderer: {
             type: String,
+            required: true,
         },
-        orderQuantity: {
-            type: Number,
-        },
+        orderHistory: {
+            type: Array,
+            required: true,
+        }
     },
     { timestamps: true }
 );
