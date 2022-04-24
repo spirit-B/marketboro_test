@@ -17,6 +17,10 @@ const orderSchema = mongoose.Schema(
             type: String,
             required: true,
         },
+        orderState: {
+            type: String,
+            default: "주문완료",
+        }
     },
     { timestamps: true }
 );
