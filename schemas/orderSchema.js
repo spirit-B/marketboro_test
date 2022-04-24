@@ -5,10 +5,18 @@ const orderSchema = mongoose.Schema(
             type: String,
             required: true,
         },
-        orderHistory: {
-            type: Array,
+        productId: {
+            type: String,
             required: true,
-        }
+        },
+        productName: {
+            type: String,
+            required: true,
+        },
+        orderQuantity: {
+            type: String,
+            required: true,
+        },
     },
     { timestamps: true }
 );
