@@ -1,12 +1,13 @@
 const express = require("express");
 const router = express.Router();
 const Order = require("../schemas/orderSchema");
+const auth = require("../middlewares/auth-middleware");
 
 router.use(express.json());
 router.use(express.urlencoded({ extended: true }));
 
 // 주문하기
-router.post("/order", async (req, res) => {
+router.post("/order", auth, async (req, res) => {
     try {
         for (let order of req.body) {
             const { orderer, productId, productName, orderQuantity } = order;
@@ -19,7 +20,7 @@ router.post("/order", async (req, res) => {
 });
 
 // 주문 부분 취소
-router.delete("/order/:orderId", async (req, res) => {
+router.delete("/order/:orderId", auth, async (req, res) => {
     const { orderId } = req.params;
     const order = await Order.findOne({ _id: orderId });
     try {

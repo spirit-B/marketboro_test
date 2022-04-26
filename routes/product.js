@@ -1,12 +1,13 @@
 const express = require("express");
 const router = express.Router();
 const Product = require("../schemas/productSchema");
+const auth = require("../middlewares/auth-middleware");
 
 router.use(express.json());
 router.use(express.urlencoded({ extended: true }));
 
 // 상품 등록
-router.post("/product", async (req, res) => {
+router.post("/product", auth, async (req, res) => {
     const { productName, price, quantity, seller } = req.body;
 
     try {
@@ -18,7 +19,7 @@ router.post("/product", async (req, res) => {
 });
 
 // 상품 조회
-router.get("/:productId", async (req, res) => {
+router.get("/:productId", auth, async (req, res) => {
     const { productId } = req.params;
     const product = await Product.findOne({ _id: productId });
 
@@ -31,7 +32,7 @@ router.get("/:productId", async (req, res) => {
 });
 
 // 상품 수정
-router.patch("/:productId", async (req, res) => {
+router.patch("/:productId", auth, async (req, res) => {
     const { productId } = req.params;
     const { productName, price, quantity } = req.body;
     const product = await Product.findOne({ _id: productId });
@@ -46,7 +47,7 @@ router.patch("/:productId", async (req, res) => {
 });
 
 // 상품 삭제
-router.delete("/:productId", async (req, res) => {
+router.delete("/:productId", auth, async (req, res) => {
     const { productId } = req.params;
     const product = await Product.findOne({ _id: productId });
 
