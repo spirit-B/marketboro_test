@@ -1,9 +1,14 @@
 # marketboro_test
 해당 과제는 Node.js 플랫폼의 express 프레임워크를 이용해 구현했습니다.
 데이터베이스는 MongoDB를 사용했습니다.
+(원래는 보안을 위해 .env를 gitignore에 추가하는것이 맞지만, 원활한 테스트를 위해 추가합니다.)
 
 ## 동작 방법
-(vscode 환경에서의 작동 기준입니다.)
+
+<details>
+  <summary> 0. 먼저, 터미널에서 'npm install' 명령어로 테스트에 필요한 모듈들을 설치합니다.</summary>
+  <img src="https://user-images.githubusercontent.com/79096544/165542170-52f104b7-8018-47e4-a0af-8d1c23035803.PNG">
+</details>
 <details>
   <summary> 1. 확장에서 Thunder Client를 설치합니다.</summary>
   <img src="https://user-images.githubusercontent.com/79096544/165519181-6c662e7d-818f-4a6c-b35e-a20c7451a541.PNG">
