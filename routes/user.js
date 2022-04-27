@@ -75,7 +75,7 @@ router.post("/login", async (req, res) => {
 
         const checkUser = await User.findOne({ userId });
 
-        if (!checkUser) {
+        if (checkUser === null) {
             return res.status(400).send({ message: "존재하지 않는 ID입니다. 회원 가입 후 로그인하세요." });
         }
 
