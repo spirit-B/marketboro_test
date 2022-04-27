@@ -18,7 +18,7 @@ router.post("/product", auth, async (req, res) => {
 });
 
 // 상품 조회
-router.get("/:productId", auth, async (req, res) => {
+router.get("/:productId", async (req, res) => {
     const { productId } = req.params;
     const product = await Product.findOne({ _id: productId });
 
