@@ -29,6 +29,12 @@
   <img src="https://user-images.githubusercontent.com/79096544/165527651-601d7d11-e089-4011-ae4d-4cb012287b2a.PNG"></br>
 </details>
 
+<details>
+  <summary> 5. 저장된 데이터들은 Robo3T를 이용해 확인하실 수 있습니다. </summary>
+  <img src="https://user-images.githubusercontent.com/79096544/165535608-f2474bfd-91b8-4e80-9831-c66781052868.PNG">
+  <img src="https://user-images.githubusercontent.com/79096544/165535622-6e9b2269-f2a0-487f-a14b-18b37a3216fe.PNG">
+</details>
+
 ## 설명
 ### 개발 필수요건
 1. 상품관리
